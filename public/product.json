@@ -1,0 +1,195 @@
+[
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/4ca944fa029717f1df765e9aa9f22091_1_iphone-11-pro-select-2019-family.jpg",
+    "productName": "iPhone 11 Pro",
+    "price": 900.0,
+    "quantity": 1,
+    "category": "Electronics",
+    "id": 1,
+    "inStock": 2,
+    "tax": 14.985
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/e6a2659da1bf086cf5daa79a98fab48a_1_apple-iphone-11-1-500x500.jpg",
+    "productName": "iPhone 11",
+    "price": 705.0,
+    "quantity": 1,
+    "category": "Electronics",
+    "id": 2,
+    "inStock": 4,
+    "tax": 10.575
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/f784d64fe1319c9ca2ff65b715a611e8_1_samsunggalaxya9jpg.jpg",
+    "productName": "Samsung Glaxy A ",
+    "price": 299.0,
+    "quantity": 1,
+    "category": "Electronics",
+    "id": 10,
+    "inStock": 4,
+    "tax": 11.985
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/750e1779266a73e1e9c6eca0d6afb930_1_huawei-p30-pro.jpg",
+    "productName": "HuaWei P30 Pro",
+    "price": 550.0,
+    "quantity": 1,
+    "category": "Electronics",
+    "id": 3,
+    "inStock": 6,
+    "tax": 12.65
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/bde66b8ef0bfe6079512f5ab72728462_1_apple_watch_series_4.jpg",
+    "productName": "Apple Watch Series",
+    "price": 700.0,
+    "quantity": 1,
+    "category": "Electronics",
+    "id": 4,
+    "inStock": 3,
+    "tax": 16.485
+  },
+
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/aa7c68ad57d5e1ea3aa94569fdbf17f6_1_148821-laptops-review-apple-macbook-air-2019-review-image3-ymwb8qupgi.jpg",
+    "productName": "Mac Book Air",
+    "price": 1090.0,
+    "quantity": 1,
+    "category": "Electronics",
+    "id": 6,
+    "inStock": 7,
+    "tax": 12.255
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/73ae9277c2422c10b934996968f4e94c_1_vacuumcleanerpng.png",
+    "productName": "Vacuum Clear",
+    "price": 190.0,
+    "quantity": 0,
+    "category": "Electronics",
+    "id": 7
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/e712eb58e780696072f9e8575d06c917_1_canoncamerajpg.jpg",
+    "productName": "DSLR Camera",
+    "price": 250.0,
+    "quantity": 0,
+    "category": "Electronics",
+    "id": 8
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/58214fcae32ac76efee012ae0471cf6e_1_oneplus8tjpg.jpg",
+    "productName": "OnePlus 8T",
+    "price": 595.0,
+    "quantity": 0,
+    "category": "Electronics",
+    "id": 9
+  },
+
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/d3f46531acc061368026b6c02d76ea4f_1_ledwatchjpg.jpg",
+    "productName": "LED Watch",
+    "price": 20.0,
+    "quantity": 0,
+    "category": "Electronics",
+    "id": 11
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/5af4234ffc3fce78d3fc291b2d3037ff_1_103921.jpg",
+    "productName": "Cofe Maker",
+    "price": 55.0,
+    "quantity": 0,
+    "category": "Home & Lifestyle",
+    "id": 12
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/5cec338c8dfd52a2f06f4a9436a5ffe4_1_havit.jpg",
+    "productName": "Havit Alam Clock",
+    "price": 30.0,
+    "quantity": 1,
+    "category": "Home & Lifestyle",
+    "id": 13,
+    "inStock": 4,
+    "tax": 0.449
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/a121d01996be8872e6a474d580697db4_1_81n-9sdsr6l.jpg",
+    "productName": "Blender",
+    "price": 52.0,
+    "quantity": 1,
+    "category": "Home & Lifestyle",
+    "id": 14,
+    "tax": 0.78
+  },
+
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/9ca422ac435c9ee6699e916d9a0aa3e7_1_latherbedjpg.jpg",
+    "productName": "Luxirous Lather",
+    "price": 120.0,
+    "quantity": 1,
+    "category": "Home & Lifestyle",
+    "id": 15,
+    "inStock": 3,
+    "tax": 2.54
+  },
+
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/3a41bbee5f3e69e1c95fd4a149fe143a_1_moneybagjpg.jpg",
+    "productName": "Men Walet",
+    "price": 8.0,
+    "quantity": 0,
+    "category": "Home & Lifestyle",
+    "id": 17
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/4bfb89b115e2f85165f5f1fb969e9b85_1_ufd110d4da3f148d5a336d7895d0e5ed9k.jpg",
+    "productName": "Oats",
+    "price": 5.0,
+    "quantity": 1,
+    "category": "Grocery",
+    "id": 18,
+    "inStock": 2,
+    "tax": 0.98
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/69794a32093232e88029158b651fd61b_1_kelloggs-corn-flakes-real-mango-300-gm-1014139.jpg",
+    "productName": "Corn Flakes",
+    "price": 5.0,
+    "quantity": 0,
+    "category": "Grocery",
+    "id": 19
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/42b911030cafa181dc4199b7281e6d27_1_menshirtjpg.jpg",
+    "productName": "Men Shart",
+    "price": 15.0,
+    "quantity": 0,
+    "category": "Cloths",
+    "id": 20
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/8510ea9e4a21dc38b54b2f9b42bb9daf_1_tshirtjpg.jpg",
+    "productName": "T Shart",
+    "price": 5.0,
+    "quantity": 0,
+    "category": "Cloths",
+    "id": 21
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/b2d35c8b72d5f0a294bd346acfcc04a8_1_cokepng.png",
+    "productName": "Coke",
+    "price": 1.0,
+    "quantity": 1,
+    "category": "Food & Beverage",
+    "id": 22,
+    "inStock": 6,
+    "tax": 0.08
+  },
+  {
+    "productImg": "https://rovercrm.net/public/uploads/items/9b5d5fe35d9e385b66709f46d192cb5a_1_15_v_16_macbookpro_thumb1200_4-3.jpg",
+    "productName": "Mac Book Pro",
+    "price": 1700.0,
+    "quantity": 0,
+    "category": "Electronics",
+    "id": 5
+  }
+]
