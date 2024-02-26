@@ -32,7 +32,9 @@ const Shiping = ({ setModal }) => {
       text: data,
     });
   };
+
   const onSubmit = (value) => {
+    console.log(value);
     if (value.item !== "" && value.price !== "" && value.quantity !== "") {
       setCartProduct([
         ...cartProduct,
@@ -42,8 +44,12 @@ const Shiping = ({ setModal }) => {
           quantity: value.quantity,
           desc: value.desc,
           id: Math.random().toFixed(2),
+          discount: value.disc,
+          disType: value.discount,
+          tax: value.tax,
         },
       ]);
+
       closeModal();
     } else {
       // eslint-disable-next-line no-unused-expressions
@@ -153,7 +159,7 @@ const Shiping = ({ setModal }) => {
                             <div className="flex gap-3">
                               <div className="sm:w-7/12 block">
                                 <Field
-                                  name="discount"
+                                  name="disc"
                                   type="text"
                                   className=" border border-[#BFBFBF] w-full h-9  px-3 focus:outline-1 focus:ring focus:outline-gray-200  rounded-sm"
                                 ></Field>
@@ -161,11 +167,13 @@ const Shiping = ({ setModal }) => {
                               <div>
                                 <Field
                                   name="discount"
-                                  as="select"
                                   type="text"
+                                  as="select"
                                   className=" border border-[#BFBFBF] w-full h-9  px-3 focus:outline-1 focus:ring focus:outline-gray-200 s"
                                 >
-                                  <option value="hello">%</option>
+                                  <option selected value="%">
+                                    %
+                                  </option>
                                   <option value="flat">Flat</option>
                                 </Field>
                               </div>

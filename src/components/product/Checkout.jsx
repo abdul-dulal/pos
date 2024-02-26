@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { amaountContext, discountContext, productContext } from "../../App";
+import BottomHeader from "./BottomHeader";
 
 const Checkout = () => {
   const [cartProduct, setCartProduct] = useContext(productContext);
@@ -22,7 +23,9 @@ const Checkout = () => {
   const parcentage = (inputAmaount / 100) * total;
   const parcentageTotal = total - parcentage;
   const netPayment =
-    selectValue === "flat" ? flatTotal.toFixed(3) : parcentageTotal.toFixed(3);
+    selectValue === "flat"
+      ? (flatTotal + Number(inputValue)).toFixed(3)
+      : (parcentageTotal + Number(inputValue)).toFixed(3);
 
   return (
     <div>
@@ -84,6 +87,12 @@ const Checkout = () => {
           </tr>
         </tbody>
       </table>
+      <BottomHeader
+        total={total}
+        netPayment={netPayment}
+        discountType={discountType}
+        setDiscountType={setDiscountType}
+      />
     </div>
   );
 };

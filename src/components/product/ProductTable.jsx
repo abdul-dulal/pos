@@ -38,7 +38,7 @@ const ProductTable = () => {
       if (item.id === id) {
         return {
           ...item,
-          quantity: item.quantity + 1,
+          quantity: Number(item.quantity) + 1,
         };
       }
       return item;

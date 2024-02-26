@@ -1,8 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { useContext, useEffect, useState } from "react";
 import { LuAlertOctagon } from "react-icons/lu";
 import Swal from "sweetalert2";
 import { productContext } from "../../App";
-const CategoryProduct = ({ category }) => {
+const CategoryProduct = ({ category, searchTerm }) => {
   const [products, setProduct] = useState([]);
   const [cartProduct, setCartProduct] = useContext(productContext);
   let result;
@@ -17,6 +18,13 @@ const CategoryProduct = ({ category }) => {
     result = products.filter((element) => element.category === category);
   } else {
     result = products;
+  }
+  if (searchTerm) {
+    const searchData = products.filter((item) =>
+      item.productName.toLowerCase().includes(searchTerm?.toLowerCase())
+    );
+
+    result = searchData;
   }
 
   const handleClick = (product) => {

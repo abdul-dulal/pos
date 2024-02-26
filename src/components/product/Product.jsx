@@ -7,6 +7,7 @@ import { HiOutlineRefresh } from "react-icons/hi";
 
 const Product = () => {
   const [category, setCategory] = useState("Refresh");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const buttonData = [
     { id: 1, label: "Refresh" },
@@ -16,6 +17,9 @@ const Product = () => {
     { id: 5, label: "Cloths" },
     { id: 6, label: "Food & Beverage" },
   ];
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
   return (
     <div className="bg-white shadow-md rounded-sm p-2 px-4 ">
@@ -31,6 +35,8 @@ const Product = () => {
             type="text"
             name=""
             placeholder="Barcode, SKU, Product Name"
+            value={searchTerm}
+            onChange={handleSearch}
             className=" h-9 w-full px-3 placeholder:text-sm placeholder:font-normal placeholder:text-[#495057] border border-primary "
           />
         </div>
@@ -70,7 +76,7 @@ const Product = () => {
           </div>
         </div>
         <div className="h-[550px] overflow-y-scroll border border-[#aaa] rounded-md p-2 ">
-          <CategoryProduct category={category} />
+          <CategoryProduct category={category} searchTerm={searchTerm} />
         </div>
       </div>
     </div>
