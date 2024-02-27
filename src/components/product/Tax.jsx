@@ -4,6 +4,7 @@ import Close from "../shere/Close";
 const Tax = ({ setModal, discountType, setDiscountType }) => {
   const modalRef = useRef();
   const [isOpen, setIsOpen] = useState(true);
+  console.log(discountType);
 
   const closeModal = () => {
     setIsOpen(false);
@@ -61,6 +62,9 @@ const Tax = ({ setModal, discountType, setDiscountType }) => {
                         onChange={({ target }) => setDiscountType(target.value)}
                         className="bg-white border border-[#BFBFBF] w-full h-9  px-3 placeholder:text-sm font-normal text-[#888888]      rounded-sm"
                       >
+                        <option value={discountType} hidden>
+                          {discountType}
+                        </option>
                         <option value="exclusive">Exclusive</option>
                         <option className="py-5 " value="inclusive">
                           Inclusive

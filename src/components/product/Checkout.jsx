@@ -22,8 +22,8 @@ const Checkout = () => {
   const tax = taxArray.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
   }, 0);
-  console.log(tax);
-  const total = discountType === "exclusive" ? subTotal + tax : subTotal;
+
+  const total = discountType == "exclusive" ? subTotal + tax : subTotal;
   const flatTotal = total - inputAmaount;
   const parcentage = (inputAmaount / 100) * total;
   const parcentageTotal = total - parcentage;
@@ -76,8 +76,10 @@ const Checkout = () => {
               Discount Cart
             </td>
             <td className="p-1 text-[#888888] font-normal text-sm text-right">
-              {inputAmaount}
-              .000$
+              {selectValue == "flat"
+                ? `${inputAmaount}.000`
+                : parcentage.toFixed(3)}
+              $
             </td>
           </tr>
           <tr>
