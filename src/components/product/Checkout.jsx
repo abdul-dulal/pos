@@ -9,6 +9,10 @@ const Checkout = () => {
   const [inputValue, setInputValue] = useState(0);
   const [discountType, setDiscountType] = useState("exclusive");
 
+  const discount = inputAmaount
+    ? inputAmaount
+    : cartProduct[cartProduct?.length]?.discount;
+
   const priceArray = cartProduct.map((e) => e.price * e.quantity);
   const taxArray = cartProduct.map((tax) => tax.tax * tax.quantity);
 
@@ -58,6 +62,7 @@ const Checkout = () => {
               <input
                 type="text"
                 name=""
+                disabled={cartProduct.length <= 0}
                 value={inputValue}
                 onChange={({ target }) => setInputValue(target.value)}
                 className="w-20 text-right py-[2px] pr-1 rounded-sm border border-[#888888] focus:outline-0 focus:ring-0"
@@ -70,7 +75,8 @@ const Checkout = () => {
               Discount Cart
             </td>
             <td className="p-1 text-[#888888] font-normal text-sm text-right">
-              {inputAmaount}.000$
+              {inputAmaount}
+              .000$
             </td>
           </tr>
           <tr>

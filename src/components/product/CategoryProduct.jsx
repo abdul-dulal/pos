@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { LuAlertOctagon } from "react-icons/lu";
 import Swal from "sweetalert2";
 import { productContext } from "../../App";
+import { Result } from "postcss";
 const CategoryProduct = ({ category, searchTerm }) => {
   const [products, setProduct] = useState([]);
   const [cartProduct, setCartProduct] = useContext(productContext);
@@ -62,29 +63,38 @@ const CategoryProduct = ({ category, searchTerm }) => {
   };
 
   return (
-    <div className="grid  lg:grid-cols-5  md:grid-cols-3 grid-cols-4 gap-[10px] ">
-      {result.map((product) => (
-        <div
-          onClick={() => handleClick(product)}
-          key={product.id}
-          className="relative border border-[#aaa] rounded-lg cursor-pointer"
-        >
-          <img src={product.productImg} className="h-36 p-2" alt="" />
-          <div className="absolute top-2 right-2">
-            {product.quantity === 0 ? (
-              <LuAlertOctagon color="red" className="" />
-            ) : (
-              ""
-            )}
-          </div>
-          <div className="absolute  bottom-0 left-0 bg-[#f3f4f5] opacity-80  w-full p-[2px] ">
-            <p className="text-[#000] whitespace-nowrap overflow-hidden text-center">
-              {product.productName}
-            </p>
-            <p className=" text-center text-[#000]">{product.price}.000</p>
-          </div>
+    <div>
+      {result.length <= 0 ? (
+        <div className="w-full h-full flex flex-col justify-center items-center">
+          <img src="/img/pos-cart.png" className="h-[250px] w-[250px]" alt="" />
+          <h1 className="text-3xl text-[#B2B2B2]">No products available</h1>
         </div>
-      ))}
+      ) : (
+        <div className="grid  lg:grid-cols-5  md:grid-cols-3 grid-cols-4 gap-[10px] ">
+          {result.map((product) => (
+            <div
+              onClick={() => handleClick(product)}
+              key={product.id}
+              className="relative border border-[#aaa] rounded-lg cursor-pointer"
+            >
+              <img src={product.productImg} className="h-36 p-2" alt="" />
+              <div className="absolute top-2 right-2">
+                {product.quantity === 0 ? (
+                  <LuAlertOctagon color="red" className="" />
+                ) : (
+                  ""
+                )}
+              </div>
+              <div className="absolute  bottom-0 left-0 bg-[#f3f4f5] opacity-80  w-full p-[2px] ">
+                <p className="text-[#000] whitespace-nowrap overflow-hidden text-center">
+                  {product.productName}
+                </p>
+                <p className=" text-center text-[#000]">{product.price}.000</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

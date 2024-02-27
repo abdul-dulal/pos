@@ -34,7 +34,6 @@ const Shiping = ({ setModal }) => {
   };
 
   const onSubmit = (value) => {
-    console.log(value);
     if (value.item !== "" && value.price !== "" && value.quantity !== "") {
       setCartProduct([
         ...cartProduct,
