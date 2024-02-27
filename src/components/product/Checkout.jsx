@@ -22,6 +22,7 @@ const Checkout = () => {
   const tax = taxArray.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
   }, 0);
+  console.log(tax);
   const total = discountType === "exclusive" ? subTotal + tax : subTotal;
   const flatTotal = total - inputAmaount;
   const parcentage = (inputAmaount / 100) * total;

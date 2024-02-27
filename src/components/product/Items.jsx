@@ -34,6 +34,11 @@ const Shiping = ({ setModal }) => {
   };
 
   const onSubmit = (value) => {
+    const tax =
+      value.tax == ""
+        ? 0
+        : ((Number(value.tax) * Number(value.price)) / 100).toFixed(3);
+
     if (value.item !== "" && value.price !== "" && value.quantity !== "") {
       setCartProduct([
         ...cartProduct,
@@ -45,7 +50,7 @@ const Shiping = ({ setModal }) => {
           id: Math.random().toFixed(2),
           discount: value.disc,
           disType: value.discount,
-          tax: value.tax,
+          tax: tax,
         },
       ]);
 
@@ -188,18 +193,15 @@ const Shiping = ({ setModal }) => {
                             <div className="sm:w-9/12 block">
                               <Field
                                 name="tax"
+                                type="text"
                                 as="select"
-                                className=" border border-[#BFBFBF] w-full h-9  px-3 placeholder:text-sm font-normal text-[#888888]    focus:outline-1 focus:ring focus:outline-gray-200  rounded-sm"
+                                className=" border border-[#BFBFBF] w-full h-9  px-3 focus:outline-1 focus:ring focus:outline-gray-200 s"
                               >
-                                <option value="not selected">
-                                  Not selected
+                                <option selected value="0">
+                                  Not seleceted
                                 </option>
-                                <option value="not selected">
-                                  Import {1.5}
-                                </option>
-                                <option value="not selected">
-                                  Exmport {2.3}
-                                </option>
+                                <option value="1.5"> Import 1.500</option>
+                                <option value="2.3"> Export 2.300</option>
                               </Field>
                             </div>
                           </div>
