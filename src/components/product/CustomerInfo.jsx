@@ -45,10 +45,12 @@ const CustomerInfo = ({ closeModal }) => {
                     placeholder="First name"
                     className="bg-white border border-[#BFBFBF] w-full h-9  px-3 placeholder:text-sm font-normal text-[#888888]    focus:outline-1 focus:ring focus:outline-gray-200  rounded-sm"
                   ></Field>
+                  <div className="text-red-700 pt-1">
+                    <ErrorMessage name="fName" />
+                  </div>
                 </div>
               </div>
 
-              <ErrorMessage name="fName" className="text-red-700 mt-1" />
               <div className="sm:flex block  items-center">
                 <div className="sm:w-1/6 block">
                   <label className=" text-sm text-[#888888] font-normal after:content-['_*'] after:content-mt-2  after:text-red-700  after:text-sm ">
@@ -62,9 +64,11 @@ const CustomerInfo = ({ closeModal }) => {
                     placeholder="Last name"
                     className="bg-white border border-[#BFBFBF] w-full h-9  px-3 placeholder:text-sm font-normal text-[#888888]    focus:outline-1 focus:ring focus:outline-gray-200  rounded-sm"
                   ></Field>
+                  <div className="text-red-700 pt-1">
+                    <ErrorMessage name="lName" className="text-red-700 mt-1" />
+                  </div>
                 </div>
               </div>
-              <ErrorMessage name="lName" className="text-red-700 mt-1" />
 
               <div className="sm:flex block  items-center">
                 <div className="sm:w-1/6 block">

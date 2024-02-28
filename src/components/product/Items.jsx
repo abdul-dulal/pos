@@ -2,11 +2,13 @@ import { useContext, useRef, useState } from "react";
 import { Formik, Field, Form } from "formik";
 import Swal from "sweetalert2";
 import Close from "../shere/Close";
-import { productContext } from "../../App";
+import { amaountContext, discountContext, productContext } from "../../App";
 const Shiping = ({ setModal }) => {
   const modalRef = useRef();
   const [isOpen, setIsOpen] = useState(true);
   const [cartProduct, setCartProduct] = useContext(productContext);
+  const [inputAmaount, setInputAmaount] = useContext(amaountContext);
+  const [selectValue, setSelectValue] = useContext(discountContext);
   const initialValues = {
     item: "",
     desc: "",
@@ -39,18 +41,19 @@ const Shiping = ({ setModal }) => {
         ? 0
         : ((Number(value.tax) * Number(value.price)) / 100).toFixed(3);
 
-    if (value.item !== "" && value.price !== "" && value.quantity !== "") {
+    if (value.item != "" && value.price != "" && value.quantity != "") {
       setCartProduct([
         ...cartProduct,
         {
           productName: value.item,
-          price: value.price,
-          quantity: value.quantity,
+          price: Number(value.price),
+          quantity: Number(value.quantity),
           desc: value.desc,
           id: Math.random().toFixed(2),
-          discount: value.disc,
+          discount: Number(value.disc),
           disType: value.discount,
           tax: tax,
+          isAdd: true,
         },
       ]);
 

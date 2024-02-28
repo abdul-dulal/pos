@@ -34,7 +34,7 @@ const Discount = ({ setModal, total }) => {
       return ErrorModal("Discount amount cannot be more than 100%");
     }
 
-    setInputAmaount(e.target.amaount.value);
+    setInputAmaount(Number(e.target.amaount.value));
     setSelectValue(selectValue);
     closeModal();
   };

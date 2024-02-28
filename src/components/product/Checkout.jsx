@@ -9,9 +9,33 @@ const Checkout = () => {
   const [inputValue, setInputValue] = useState(0);
   const [discountType, setDiscountType] = useState("exclusive");
 
-  const discount = inputAmaount
-    ? inputAmaount
-    : cartProduct[cartProduct?.length]?.discount;
+  const addItems = () => {
+    const item = [];
+    for (let i = 0; i < cartProduct.length; i++) {
+      if (cartProduct[i].isAdd) {
+        item.push(cartProduct[i]);
+      }
+    }
+    return item;
+  };
+  const addItemsArray = addItems();
+
+  const percentageDiscountArray = addItemsArray.map((e) =>
+    e?.disType == "" ? (e.discount * (e.price * e.quantity)) / 100 : ""
+  );
+  const percentageDiscount = percentageDiscountArray.reduce(
+    (accumulator, currentValue) => {
+      return accumulator + currentValue;
+    },
+    0
+  );
+
+  const flatDiscountArray = addItemsArray.map((e) =>
+    e?.disType == "flat" ? e.discount : ""
+  );
+  const flatDiscount = flatDiscountArray.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  }, 0);
 
   const priceArray = cartProduct.map((e) => e.price * e.quantity);
   const taxArray = cartProduct.map((tax) => tax.tax * tax.quantity);

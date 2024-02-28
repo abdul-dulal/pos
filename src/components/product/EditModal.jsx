@@ -105,20 +105,21 @@ const EditModal = ({ product, setModal }) => {
                             <div className="flex gap-3">
                               <div className="sm:w-7/12 block">
                                 <Field
-                                  name="discount"
+                                  name="disc"
                                   type="text"
-                                  editValue={1}
                                   className=" border border-[#BFBFBF] w-full h-9  px-3 focus:outline-1 focus:ring focus:outline-gray-200  rounded-sm"
                                 ></Field>
                               </div>
                               <div>
                                 <Field
                                   name="discount"
-                                  as="select"
                                   type="text"
+                                  as="select"
                                   className=" border border-[#BFBFBF] w-full h-9  px-3 focus:outline-1 focus:ring focus:outline-gray-200 s"
                                 >
-                                  <option value="hello">%</option>
+                                  <option selected value="%">
+                                    %
+                                  </option>
                                   <option value="flat">Flat</option>
                                 </Field>
                               </div>
