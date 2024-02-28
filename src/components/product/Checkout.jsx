@@ -21,7 +21,9 @@ const Checkout = () => {
   const addItemsArray = addItems();
 
   const percentageDiscountArray = addItemsArray.map((e) =>
-    e?.disType == "" ? (e.discount * (e.price * e.quantity)) / 100 : ""
+    e?.disType == ""
+      ? (Number(e.discount) * (Number(e.price) * Number(e.quantity))) / 100
+      : ""
   );
   const percentageDiscount = percentageDiscountArray.reduce(
     (accumulator, currentValue) => {
@@ -101,8 +103,16 @@ const Checkout = () => {
             </td>
             <td className="p-1 text-[#888888] font-normal text-sm text-right">
               {selectValue == "flat"
-                ? `${inputAmaount}.000`
-                : parcentage.toFixed(3)}
+                ? `${
+                    Number(inputAmaount) +
+                    Number(flatDiscount) +
+                    Number(percentageDiscount)
+                  }.000`
+                : (
+                    Number(parcentage) +
+                    Number(flatDiscount) +
+                    Number(percentageDiscount)
+                  ).toFixed(3)}
               $
             </td>
           </tr>
@@ -115,7 +125,7 @@ const Checkout = () => {
               Net Payable
             </td>
             <td className="p-1  font-normal text-sm bg-[#FF7A5A] text-white text-right">
-              {netPayment}
+              {netPayment - Number(flatDiscount) - Number(percentageDiscount)}
             </td>
           </tr>
         </tbody>
