@@ -57,6 +57,7 @@ const Checkout = () => {
     selectValue === "flat"
       ? (flatTotal + Number(inputValue)).toFixed(3)
       : (parcentageTotal + Number(inputValue)).toFixed(3);
+  console.log(netPayment, percentageDiscount);
 
   return (
     <div>

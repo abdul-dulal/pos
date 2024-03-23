@@ -3,10 +3,11 @@ import { useContext, useEffect, useState } from "react";
 import { LuAlertOctagon } from "react-icons/lu";
 import Swal from "sweetalert2";
 import { productContext } from "../../App";
-import { Result } from "postcss";
+
 const CategoryProduct = ({ category, searchTerm }) => {
   const [products, setProduct] = useState([]);
   const [cartProduct, setCartProduct] = useContext(productContext);
+
   let result;
 
   useEffect(() => {
@@ -83,6 +84,16 @@ const CategoryProduct = ({ category, searchTerm }) => {
                   <LuAlertOctagon color="red" className="" />
                 ) : (
                   ""
+                )}
+                {cartProduct.map((e) =>
+                  e.id == product.id && e.quantity == product.inStock ? (
+                    <p key={e.id}>
+                      {" "}
+                      <LuAlertOctagon color="red" className="" />
+                    </p>
+                  ) : (
+                    ""
+                  )
                 )}
               </div>
               <div className="absolute  bottom-0 left-0 bg-[#f3f4f5] opacity-80  w-full p-[2px] ">

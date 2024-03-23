@@ -36,6 +36,7 @@ const Shiping = ({ setModal }) => {
   };
 
   const onSubmit = (value) => {
+    console.log(value.disc);
     const tax =
       value.tax == ""
         ? 0
@@ -50,7 +51,7 @@ const Shiping = ({ setModal }) => {
           quantity: Number(value.quantity),
           desc: value.desc,
           id: Math.random().toFixed(2),
-          discount: Number(value.disc),
+          discount: value.disc ? Number(value.disc) : 0,
           disType: value.discount,
           tax: tax,
           isAdd: true,
